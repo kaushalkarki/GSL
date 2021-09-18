@@ -94,20 +94,43 @@
 .sidebar {
   /* top: 0px;
   left: 0px; */
+  width: 63px;
+  height: 1080px;
+  background: transparent linear-gradient(360deg, #94007d 0%, #250068 100%) 0%
+    0% no-repeat padding-box;
+  opacity: 1;
+  animation-name: example1;
+  animation-duration: 1s;
+  position: relative;
+}
+.sidebar-extend {
+  /* top: 0px;
+  left: 0px; */
   width: 206px;
   height: 1080px;
   background: transparent linear-gradient(360deg, #94007d 0%, #250068 100%) 0%
     0% no-repeat padding-box;
   opacity: 1;
-  /* animation-name: example; */
-  /* animation-duration: 1s; */
+  animation-name: example2;
+  animation-duration: .5s;
   position: relative;
-  display: none;
 }
-/* @keyframes example {
-  0%   { left:-200px; top:0px;}
-  100%  { left:0px; top:0px;}
-} */
+@keyframes example1 {
+  0% {
+    width: 206px;
+  }
+  100% {
+    width: 63px;
+  }
+}
+@keyframes example2 {
+  0% {
+    width: 63px;
+  }
+  100% {
+    width: 206px;
+  }
+}
 .side-div {
   top: 46px;
   left: 24px;
@@ -119,8 +142,8 @@
   /* cursor: pointer; */
 }
 #menubtn {
-  width: 18px;
-  height: 18px;
+  width: 24px;
+  height: 24px;
 }
 .side-icon {
   width: 22px;
@@ -130,10 +153,23 @@
 }
 .side-nav {
   left: 63px;
-  top: 115px;
+  top: 120px;
   display: grid;
   position: absolute;
+  animation-name: popup;
+  animation-duration: 2s;
   /* background-color: #ffffff; */
+}
+
+@keyframes popup {
+  0% {
+    left: 63px;
+    top: -300px;
+  }
+  100% {
+    left: 63px;
+    top: 120px;
+  }
 }
 .side-nav-title {
   margin-bottom: 46px;
@@ -249,14 +285,12 @@
   border-radius: 8px;
   opacity: 1;
 }
-.table{
+.table {
   top: 343px;
   margin-left: 50px;
   width: 1500px;
   height: auto;
   border-spacing: 10px;
-  
-  
 }
 th {
   text-align: left;
@@ -264,7 +298,7 @@ th {
   letter-spacing: 0px;
   color: #444444;
   opacity: 1;
-  
+
   border-bottom: 1px solid rgb(250, 245, 245);
 }
 td {
@@ -303,8 +337,7 @@ td {
   text-transform: capitalize;
 }
 .btn:focus
-/* ,.btn:focus  */
-{
+/* ,.btn:focus  */ {
   color: rebeccapurple;
   border: none;
   box-shadow: inset 0px -20px 0px -15px rebeccapurple;
@@ -321,6 +354,4 @@ td {
   color: #ffffff;
   text-align: center;
   border: none;
-
 }
-
