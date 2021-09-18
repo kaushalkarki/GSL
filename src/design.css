@@ -1,0 +1,326 @@
+* {
+  margin: 0;
+  /* overflow: hidden; */
+}
+.header {
+  display: flex;
+  top: 0px;
+  left: 0px;
+  width: 1920px;
+  height: 100px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 6px #93007d4f;
+  opacity: 1;
+}
+.header .logo {
+  top: 17px;
+  left: 100px;
+  width: 171px;
+  height: 67px;
+  opacity: 1;
+  position: absolute;
+}
+.title {
+  top: 33px;
+  position: absolute;
+  left: 798px;
+  width: 324px;
+  height: 48px;
+  text-align: center;
+  font: normal normal normal 40px/48px Lato;
+  letter-spacing: 0px;
+  color: #444444;
+  opacity: 1;
+}
+.header .inner-div {
+  top: 45px;
+  left: 1563px;
+  width: 265px;
+  height: 25px;
+  opacity: 1;
+  position: absolute;
+  justify-content: space-around;
+  display: flex;
+}
+
+.welcome-text {
+  top: 48px;
+  left: 1596px;
+  width: 65px;
+  height: 18px;
+  text-align: left;
+  /* position: sticky; */
+  font: normal normal normal 15px/18px Lato;
+  letter-spacing: 0.51px;
+  color: #444444;
+  opacity: 1;
+}
+.icon-notification {
+  top: 48px;
+  left: 1563px;
+  width: 17px;
+  height: 20px;
+  opacity: 1;
+  /* position: sticky; */
+}
+.doc-name {
+  top: 48px;
+  left: 1702px;
+  width: 99px;
+  height: 18px;
+  /* position: sticky; */
+  text-align: left;
+  font: normal normal normal 15px/18px Lato;
+  letter-spacing: 0.51px;
+  color: #444444;
+  opacity: 1;
+}
+.icon-profile {
+  top: 45px;
+  left: 1667px;
+  width: 25px;
+  height: 25px;
+  /* position: sticky; */
+  opacity: 1;
+}
+.header .icon-arrow {
+  top: 57px;
+  left: 1820px;
+  width: 8px;
+  height: 6px;
+  opacity: 1;
+  position: sticky;
+}
+.sidebar {
+  /* top: 0px;
+  left: 0px; */
+  width: 206px;
+  height: 1080px;
+  background: transparent linear-gradient(360deg, #94007d 0%, #250068 100%) 0%
+    0% no-repeat padding-box;
+  opacity: 1;
+  /* animation-name: example; */
+  /* animation-duration: 1s; */
+  position: relative;
+  display: none;
+}
+/* @keyframes example {
+  0%   { left:-200px; top:0px;}
+  100%  { left:0px; top:0px;}
+} */
+.side-div {
+  top: 46px;
+  left: 24px;
+  width: 18px;
+  height: 372px;
+  /* border: 2px solid #ebc3f6; */
+  opacity: 1;
+  position: absolute;
+  /* cursor: pointer; */
+}
+#menubtn {
+  width: 18px;
+  height: 18px;
+}
+.side-icon {
+  width: 22px;
+  height: 22px;
+  margin-top: 46px;
+  cursor: pointer;
+}
+.side-nav {
+  left: 63px;
+  top: 115px;
+  display: grid;
+  position: absolute;
+  /* background-color: #ffffff; */
+}
+.side-nav-title {
+  margin-bottom: 46px;
+  text-align: left;
+  font: normal normal normal 22px/27px Lato;
+  letter-spacing: 0px;
+  color: #ebc3f6;
+  opacity: 1;
+}
+.div-btn {
+  margin-top: 26px;
+  margin-left: 50px;
+  width: 73px;
+  height: 57px;
+  display: grid;
+}
+.btn-icons {
+  top: 198px;
+  margin-left: 10px;
+  margin-top: 27px;
+  width: 55px;
+  height: 54px;
+}
+.btn-title {
+  /* margin-top: 64px;
+  margin-left: 50px; */
+  text-align: left;
+  font: normal normal normal 16px/19px Lato;
+  letter-spacing: -0.03px;
+  color: #444444;
+  opacity: 1;
+  display: inline-block;
+}
+.btn-data {
+  /* margin-left: 50px;
+  margin-top: 38px; */
+  text-align: left;
+  font: normal normal bold 32px/39px Lato;
+  letter-spacing: 1.09px;
+  color: #444444;
+  opacity: 1;
+}
+.scheduled {
+  top: 161px;
+  left: 277px;
+  width: 237px;
+  height: 108px;
+  position: absolute;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 6px #8e4b814d;
+  border-radius: 7px;
+  opacity: 1;
+  display: flex;
+}
+.active {
+  top: 161px;
+  left: 611px;
+  width: 237px;
+  height: 108px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 6px #8e4b814d;
+  position: absolute;
+  display: flex;
+  border-radius: 7px;
+  opacity: 1;
+}
+.in-progress {
+  top: 161px;
+  left: 945px;
+  width: 237px;
+  height: 108px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 6px #8e4b814d;
+
+  display: flex;
+  border-radius: 7px;
+  position: absolute;
+  opacity: 1;
+}
+.closed {
+  top: 161px;
+  left: 1278px;
+  width: 237px;
+  height: 108px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 6px #8e4b814d;
+  border-radius: 7px;
+  opacity: 1;
+  position: absolute;
+  display: flex;
+}
+.add-patients {
+  top: 161px;
+  left: 1612px;
+  width: 237px;
+  height: 108px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 6px #8e4b814d;
+  border-radius: 7px;
+  opacity: 1;
+  position: absolute;
+  display: flex;
+}
+.dashboard {
+  top: 343px;
+  left: 277px;
+  width: 1572px;
+  height: 707px;
+  background-color: teal;
+  position: absolute;
+  background: white 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #8f4b804d;
+  border-radius: 8px;
+  opacity: 1;
+}
+.table{
+  top: 343px;
+  margin-left: 50px;
+  width: 1500px;
+  height: auto;
+  border-spacing: 10px;
+  
+  
+}
+th {
+  text-align: left;
+  font: normal normal bold 22px/27px Lato;
+  letter-spacing: 0px;
+  color: #444444;
+  opacity: 1;
+  
+  border-bottom: 1px solid rgb(250, 245, 245);
+}
+td {
+  text-align: left;
+  font: normal normal normal 22px/27px Lato;
+  letter-spacing: 0px;
+  color: #444444;
+  opacity: 1;
+  border-bottom: 1px solid whitesmoke;
+}
+.navbar {
+  display: flex;
+}
+.btn-grp {
+  text-align: left;
+  font: normal normal bold 22px/27px Lato;
+  letter-spacing: 0px;
+  color: #40006d;
+  opacity: 1;
+}
+
+.btn {
+  border: none;
+  /* border: 1px black solid; */
+  /* border-right: 1px solid black;
+    border-bottom: black solid 1px; */
+  /* min-width: 6rem; */
+  padding: 1.5rem 3rem;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  margin: 0;
+  font-size: 22px;
+  /* font: normal normal bold 22px/27px Lato; */
+  box-shadow: inset 0px 0px 0px -15px rebeccapurple;
+  transition: all 300ms ease-out;
+  text-transform: capitalize;
+}
+.btn:focus
+/* ,.btn:focus  */
+{
+  color: rebeccapurple;
+  border: none;
+  box-shadow: inset 0px -20px 0px -15px rebeccapurple;
+}
+.edit {
+  width: 79px;
+  height: 30px;
+  background: #c740a9 0% 0% no-repeat padding-box;
+  border-radius: 4px;
+  opacity: 1;
+  text-align: left;
+  font: normal normal normal 22px/27px Lato;
+  letter-spacing: 0px;
+  color: #ffffff;
+  text-align: center;
+  border: none;
+
+}
+
