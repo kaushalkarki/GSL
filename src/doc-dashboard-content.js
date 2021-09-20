@@ -3,6 +3,7 @@ import schedule from "./schedule.png";
 import active from "./active.png";
 import closed from "./closed.png";
 import inprogress from "./in-progress.png";
+import search from "./search.png";
 import addPatient from "./add-patient.png";
 import PatientData from "./PatientData";
 
@@ -30,38 +31,38 @@ const Content = () => {
         <div className="scheduled">
           <img src={schedule} alt="schedule" className="btn-icons" />
           <div className="div-btn">
-            <text className="btn-data">12</text>
-            <text className="btn-title">Scheduled</text>
+            <p className="btn-data">12</p>
+            <p className="btn-title">Scheduled</p>
           </div>
         </div>
         <div className="active">
           <img src={active} alt="active" className="btn-icons" />
           <div className="div-btn">
-            <text className="btn-data">05</text>
-            <text className="btn-title">Active</text>
+            <p className="btn-data">05</p>
+            <p className="btn-title">Active</p>
           </div>
         </div>
         <div className="in-progress">
           <img src={inprogress} alt="in-progress" className="btn-icons" />
           <div className="div-btn">
-            <text className="btn-data">05</text>
-            <text className="btn-title">In Progress</text>
+            <p className="btn-data">05</p>
+            <p className="btn-title">In Progress</p>
           </div>
         </div>
         <div className="closed">
           <img src={closed} alt="closed" className="btn-icons" />
           <div className="div-btn">
-            <text className="btn-data">129</text>
+            <p className="btn-data">129</p>
 
-            <text className="btn-title">Closed</text>
+            <p className="btn-title">Closed</p>
           </div>
         </div>
 
         <div className="add-patients">
           <img src={addPatient} alt="add-patients" className="btn-icons" />
           <div className="div-btn">
-            <text className="btn-data">Add</text>
-            <text className="btn-title">Patients</text>
+            <p className="btn-data">Add</p>
+            <p className="btn-title">Patients</p>
           </div>
         </div>
         <div className="dashboard">
@@ -76,8 +77,9 @@ const Content = () => {
               <button className="btn" onClick={DevicesTab}>
                 Devices
               </button>
-
             </div>
+            <input type="text" id="searchbox" />
+            <img src={search} alt="search" id="search-icon" />
           </nav>
 
           <section>
@@ -90,7 +92,7 @@ const Content = () => {
             ) : (
               <table className="table">
                 <thead>
-                  <tr classname="table-head">
+                  <tr className="table-head">
                     <th>ID</th>
                     <th> Name</th>
                     <th>Age</th>
@@ -107,6 +109,8 @@ const Content = () => {
                         <tr
                           key={Element.id}
                           contentEditable={edit === true ? "true" : "false"}
+                          suppressContentEditableWarning={true}
+
                         >
                           <td>{Element.id}</td>
                           <td>{Element.name}</td>
@@ -119,6 +123,8 @@ const Content = () => {
                               className="edit"
                               onClick={isEditable}
                               contentEditable="false"
+                              suppressContentEditableWarning={true}
+
                             >
                               Edit
                             </button>
