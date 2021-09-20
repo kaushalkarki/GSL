@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import menu from "./menu.jpg";
+import menu from "./menu.png";
 import back from "./back.svg";
 import forward from "./forward.svg";
 import feedback from "./feedback.svg";
