@@ -10,7 +10,7 @@ const Ddash = () => {
 
   return (
     <>
-      <div>
+      <div id="DoctorDashboard">
         <Header />
 
         <Content/>

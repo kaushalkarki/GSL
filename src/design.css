@@ -1,6 +1,7 @@
 * {
   margin: 0;
   /* overflow: hidden; */
+  box-sizing: border-box;
 }
 .header {
   display: flex;
@@ -21,7 +22,7 @@
   position: absolute;
 }
 .title {
-  top: 33px;
+  top: 10px;
   position: absolute;
   left: 798px;
   width: 324px;
@@ -44,12 +45,12 @@
 }
 
 .welcome-text {
-  top: 48px;
-  left: 1596px;
+  top: -11px;
+  left: -5px;
   width: 65px;
   height: 18px;
   text-align: left;
-  /* position: sticky; */
+  position: relative;
   font: normal normal normal 15px/18px Lato;
   letter-spacing: 0.51px;
   color: #444444;
@@ -64,11 +65,11 @@
   /* position: sticky; */
 }
 .doc-name {
-  top: 48px;
-  left: 1702px;
+  top: -11px;
+  left: 0px;
   width: 99px;
   height: 18px;
-  /* position: sticky; */
+  position: relative;
   text-align: left;
   font: normal normal normal 15px/18px Lato;
   letter-spacing: 0.51px;
@@ -84,12 +85,12 @@
   opacity: 1;
 }
 .header .icon-arrow {
-  top: 57px;
-  left: 1820px;
+  top: 11px;
+  left: 0px;
   width: 8px;
   height: 6px;
   opacity: 1;
-  position: sticky;
+  position: relative;
 }
 .sidebar {
   /* top: 0px;
@@ -100,7 +101,7 @@
     0% no-repeat padding-box;
   opacity: 1;
   animation-name: example1;
-  animation-duration: 1s;
+  animation-duration: 0.3s;
   position: relative;
 }
 .sidebar-extend {
@@ -112,7 +113,7 @@
     0% no-repeat padding-box;
   opacity: 1;
   animation-name: example2;
-  animation-duration: 0.5s;
+  animation-duration: 0.3s;
   position: relative;
 }
 @keyframes example1 {
@@ -157,7 +158,7 @@
   display: grid;
   position: absolute;
   animation-name: popup;
-  animation-duration: 2s;
+  animation-duration: 1s;
   /* background-color: #ffffff; */
 }
 
@@ -180,11 +181,12 @@
   opacity: 1;
 }
 .div-btn {
-  margin-top: 26px;
-  margin-left: 50px;
+  margin-top: 10px;
+  margin-left: 115px;
   width: 73px;
   height: 57px;
   display: grid;
+  position: absolute;
 }
 .btn-icons {
   top: 198px;
@@ -194,13 +196,13 @@
   height: 54px;
 }
 .btn-title {
-  /* margin-top: 64px;
-  margin-left: 50px; */
+  top: 42px;
   text-align: left;
   font: normal normal normal 16px/19px Lato;
   letter-spacing: -0.03px;
   color: #444444;
   opacity: 1;
+  position: absolute;
   display: inline-block;
 }
 .btn-data {
@@ -343,8 +345,8 @@ td {
   box-shadow: inset 0px -20px 0px -15px rebeccapurple;
 }
 #searchbox {
-  margin-top:15px; 
-  left: 850px;
+  margin-top: 15px;
+  left: 910px;
   position: absolute;
   width: 617px;
   height: 40px;
@@ -355,10 +357,10 @@ td {
   padding-left: 15px;
   padding-right: 40px;
 }
-#search-icon{
+#search-icon {
   top: 80px;
   left: 1500px;
-  position:absolute;
+  position: absolute;
   width: 17px;
   height: 17px;
   z-index: 10;
@@ -375,4 +377,30 @@ td {
   color: #ffffff;
   text-align: center;
   border: none;
+}
+#add-patient {
+  float: right;
+  margin: 33px 162px 0 0;
+  width: 165px;
+  height: 33px;
+  background: var(--unnamed-color-c740a9) 0% 0% no-repeat padding-box;
+  background: #c740a9 0% 0% no-repeat padding-box;
+  border-radius: 4px;
+  opacity: 1;
+  border: none;
+  text-align: center;
+  font: normal normal normal 20px/24px Lato;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+  display: flexbox;
+}
+#add-patient-icon {
+  width: 19px;
+  height: 19px;
+  margin: 2px 4px -2px 0;
+}
+.popup-container {
+  left: 500px;
+  top: 50%;
 }

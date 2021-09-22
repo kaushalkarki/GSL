@@ -7,9 +7,12 @@ import search from "./search.png";
 import addPatient from "./add-patient.png";
 import PatientData from "./PatientData";
 
+import ControlledPopup from "./PopupForm";
+// import "reactjs-popup/dist/index.css";
+
 const Content = () => {
   const [display, setDisplay] = useState(0);
-  const [edit, setEdit] = useState(false);
+  // const [edit, setEdit] = useState(false);
 
   const PatientTab = () => {
     setDisplay(0);
@@ -21,8 +24,14 @@ const Content = () => {
     setDisplay(2);
   };
 
-  const isEditable = () => {
-    edit === false ? setEdit(true) : setEdit(false);
+  const isEditable = (e) => {
+    // console.log(e.target.parentNode.parentNode);
+    let selected = e.target.parentNode.parentNode;
+    if (selected.contentEditable === "true") selected.contentEditable = "false";
+    else selected.contentEditable = "true";
+
+    // edit === false ? setEdit(true) : setEdit(false);
+    // setEdit(!edit)
   };
 
   return (
@@ -79,7 +88,7 @@ const Content = () => {
               </button>
             </div>
             <input type="text" id="searchbox" />
-            <img src={search} alt="search" id="search-icon" />
+            <img src={search} alt="search" id="search-icon" onClick={()=>alert("Searching Btn working")} />
           </nav>
 
           <section>
@@ -105,38 +114,47 @@ const Content = () => {
                 <tbody>
                   {PatientData.map((Element) => {
                     return (
-                      <>
-                        <tr
-                          key={Element.id}
-                          contentEditable={edit === true ? "true" : "false"}
-                          suppressContentEditableWarning={true}
-
-                        >
-                          <td>{Element.id}</td>
-                          <td>{Element.name}</td>
-                          <td>{Element.age}</td>
-                          <td>{Element.gender}</td>
-                          <td>{Element.status}</td>
-                          <td>{Element.date}</td>
-                          <td width="15%">
-                            <button
-                              className="edit"
-                              onClick={isEditable}
-                              contentEditable="false"
-                              suppressContentEditableWarning={true}
-
-                            >
-                              Edit
-                            </button>
-                          </td>
-                        </tr>
-                      </>
+                      <tr
+                        key={Element.id}
+                        suppressContentEditableWarning={true}
+                      >
+                        <td>{Element.id}</td>
+                        <td>{Element.name}</td>
+                        <td>{Element.age}</td>
+                        <td>{Element.gender}</td>
+                        <td>{Element.status}</td>
+                        <td>{Element.date}</td>
+                        <td width="15%">
+                          <button
+                            className="edit"
+                            onClick={isEditable}
+                            contentEditable="false"
+                            suppressContentEditableWarning={true}
+                          >
+                            Edit
+                          </button>
+                        </td>
+                      </tr>
                     );
                   })}
                 </tbody>
               </table>
             )}
           </section>
+          
+          <ControlledPopup/>
+
+
+          {/* <Popup closeOnDocumentClick onClose trigger={<button id="add-patient">
+            <span>
+              <img src={addicon} id="add-patient-icon" alt="+" />
+              Add Patients
+            </span>
+          </button>}modal>
+            
+            <div id="background"><PopupForm/></div>
+          </Popup> */}
+          
         </div>
       </div>
     </>
