@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Popup from "reactjs-popup";
-import addicon from "./addicon.png";
-import exit from "./close.png";
+import addicon from "./images/addicon.png";
+import exit from "./images/close.png";
 import "./PopUp.css";
 
 const ControlledPopup = () => {
@@ -15,7 +15,7 @@ const ControlledPopup = () => {
           Add Patients
         </span>
       </button>
-      <Popup open={open} closeOnDocumentClick onClose={closeModal}>
+      <Popup open={open} overlayStyle closeOnDocumentClick onClose={closeModal}>
         <div className="modal">
           <div id ="background">
             <div id="popup-container" draggable="true">

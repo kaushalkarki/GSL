@@ -9,12 +9,12 @@ const Header = () => {
         <>
         <div className="header">
           <img src={logo} alt="logo" className="logo" />
-          <p className="title">Doctor Dashboard</p>
+          <p className="title">Pathology Dashboard</p>
           <div className="inner-div">
             <img src={notification} alt="bell" className="icon-notification" />
             <p className="welcome-text">Welcome</p>
             <img src={profile} alt="bell" className="icon-profile" />
-            <p className="doc-name">Dr. Ali Masudi</p>
+            <p className="doc-name">Dr. Radha Vyas</p>
             <img src={arrow} alt="arrow" className="icon-arrow" />
           </div>
         </div>

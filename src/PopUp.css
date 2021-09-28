@@ -3,28 +3,29 @@
   padding: 0;
   z-index: 5;
 }
-#background{
+#background {
   position: relative;
   width: 100vw;
-  height:100vh;
+  height: 100vh;
   top: 0;
   left: 0;
-  background-color:rgba(0, 0, 0, 0.308);
+  background-color: rgba(0, 0, 0, 0.308);
+  overflow-y: scroll;
 }
 #popup-container {
   width: 751px;
   height: 853px;
   top: 50px;
-  left:550px;
+  left: 550px;
   background: #ffffff 0% 0% no-repeat padding-box;
   border-radius: 8px;
   opacity: 1;
   position: relative;
   z-index: 5;
+  overflow: hidden;
   /* background: rgba(0, 0, 0, 0);
   transition: opacity 500ms;
   visibility:visible; */
-  
 }
 #popup-title {
   width: 751px;
@@ -33,9 +34,9 @@
   border-radius: 8px 8px 0px 0px;
   opacity: 1;
 }
-#closebtn{
-  height:28px ;
-  width:28px ;
+#closebtn {
+  height: 28px;
+  width: 28px;
   float: right;
   margin: -18px 17px 0 0;
 }
@@ -54,6 +55,8 @@
   height: 703px;
   margin: 60px 0 0 95px;
   position: absolute;
+  /* border: 1PX solid red; */
+
 }
 
 .details-div {
@@ -79,7 +82,7 @@ p {
   padding-left: 15px;
 }
 #fullname {
-  left: 97px;
+  left: 110px;
 }
 #birth {
   height: 40px;
@@ -90,11 +93,11 @@ p {
   border: 1px solid #c740a9;
   opacity: 1;
   position: absolute;
-  left: 169px;
+  left: 184px;
   text-transform: uppercase;
 }
 #gender-m {
-  left: 171px;
+  left: 185px;
   position: absolute;
   color: black;
   width: 203px;
@@ -103,7 +106,7 @@ p {
   padding: 10px 0 0 0;
 }
 #gender-f {
-  left: 276px;
+  left: 285px;
   position: absolute;
   color: black;
   width: 203px;
@@ -112,23 +115,23 @@ p {
   padding: 10px 0 0 0;
 }
 #address {
-  left: 113px;
+  left: 125px;
   height: 67px;
 }
 #height {
-  left: 123px;
+  left: 135px;
 }
 #weight {
-  left: 120px;
+  left: 131px;
 }
 #email {
-  left: 128px;
+  left: 145px;
 }
 #number {
-  left: 57px;
+  left: 61px;
 }
 #conditions {
-  left: 34px;
+  left: 40px;
   height: 67px;
 }
 #cancel-btn {
@@ -146,7 +149,6 @@ p {
   background: #ffffff 0% 0% no-repeat padding-box;
   border: 1px solid #c740a9;
   border-radius: 4px;
-
 }
 #save-btn {
   margin-top: 71px;
@@ -167,24 +169,23 @@ p {
 }
 
 @media only screen and (max-width: 600px) {
-#background{
-  width: 100vw;
-  height: 100vh;
-  /* background-color: chartreuse; */
-}
-#popup-container {
-  width: 751px;
-  height: 853px;
-  top: 0;
-  left:0;
-  background: #ffffff 0% 0% no-repeat padding-box;
-  border-radius: 8px;
-  opacity: 1;
-  position: relative;
-  z-index: 5;
-  /* background: rgba(0, 0, 0, 0);
+  #background {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: chartreuse; */
+  }
+  #popup-container {
+    width: 751px;
+    height: 853px;
+    top: 0;
+    left: 0;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    opacity: 1;
+    position: relative;
+    z-index: 5;
+    /* background: rgba(0, 0, 0, 0);
   transition: opacity 500ms;
   visibility:visible; */
-  
-}
+  }
 }

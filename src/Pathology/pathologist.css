@@ -1,8 +1,3 @@
-* {
-  margin: 0;
-  /* overflow: hidden; */
-  box-sizing: border-box;
-}
 .header {
   display: flex;
   top: 0px;
@@ -25,7 +20,7 @@
   top: 10px;
   position: absolute;
   left: 798px;
-  width: 324px;
+  width: 380px;
   height: 48px;
   text-align: center;
   font: normal normal normal 40px/48px Lato;
@@ -67,7 +62,7 @@
 .doc-name {
   top: -11px;
   left: 0px;
-  width: 99px;
+  width: 110px;
   height: 18px;
   position: relative;
   text-align: left;
@@ -109,7 +104,7 @@
 }
 .btn-title {
   top: 42px;
-  width: 80px;
+  width:80px;
   text-align: left;
   font: normal normal normal 16px/19px Lato;
   letter-spacing: -0.03px;
@@ -120,14 +115,14 @@
 }
 .btn-data {
   /* margin-left: 50px;
-  margin-top: 38px; */
+    margin-top: 38px; */
   text-align: left;
   font: normal normal bold 32px/39px Lato;
   letter-spacing: 1.09px;
   color: #444444;
   opacity: 1;
 }
-#doc-scheduled {
+.scheduled {
   top: 161px;
   left: 277px;
   width: 237px;
@@ -139,9 +134,9 @@
   opacity: 1;
   display: flex;
 }
-#doc-active {
+.active {
   top: 161px;
-  left: 611px;
+  left: 722px;
   width: 237px;
   height: 108px;
   background: #ffffff 0% 0% no-repeat padding-box;
@@ -151,9 +146,9 @@
   border-radius: 7px;
   opacity: 1;
 }
-#doc-in-progress {
+.in-progress {
   top: 161px;
-  left: 945px;
+  left: 1167px;
   width: 237px;
   height: 108px;
   background: #ffffff 0% 0% no-repeat padding-box;
@@ -164,19 +159,7 @@
   position: absolute;
   opacity: 1;
 }
-#doc-closed {
-  top: 161px;
-  left: 1278px;
-  width: 237px;
-  height: 108px;
-  background: #ffffff 0% 0% no-repeat padding-box;
-  box-shadow: 0px 0px 6px #8e4b814d;
-  border-radius: 7px;
-  opacity: 1;
-  position: absolute;
-  display: flex;
-}
-#doc-add-patients {
+.closed {
   top: 161px;
   left: 1612px;
   width: 237px;
@@ -188,18 +171,7 @@
   position: absolute;
   display: flex;
 }
-.dashboard {
-  top: 343px;
-  left: 277px;
-  width: 1572px;
-  height: 707px;
-  background-color: teal;
-  position: absolute;
-  background: white 0% 0% no-repeat padding-box;
-  box-shadow: 0px 3px 6px #8f4b804d;
-  border-radius: 8px;
-  opacity: 1;
-}
+
 .table {
   top: 343px;
   margin-left: 50px;
@@ -252,7 +224,7 @@ td {
   text-transform: capitalize;
 }
 .btn:focus
-/* ,.btn:focus  */ {
+  /* ,.btn:focus  */ {
   color: rebeccapurple;
   border: none;
   box-shadow: inset 0px -20px 0px -15px rebeccapurple;
@@ -277,43 +249,4 @@ td {
   width: 17px;
   height: 17px;
   z-index: 10;
-}
-.edit {
-  width: 79px;
-  height: 30px;
-  background: #c740a9 0% 0% no-repeat padding-box;
-  border-radius: 4px;
-  opacity: 1;
-  text-align: left;
-  font: normal normal normal 22px/27px Lato;
-  letter-spacing: 0px;
-  color: #ffffff;
-  text-align: center;
-  border: none;
-}
-#add-patient {
-  float: right;
-  margin: 33px 162px 0 0;
-  width: 165px;
-  height: 33px;
-  background: var(--unnamed-color-c740a9) 0% 0% no-repeat padding-box;
-  background: #c740a9 0% 0% no-repeat padding-box;
-  border-radius: 4px;
-  opacity: 1;
-  border: none;
-  text-align: center;
-  font: normal normal normal 20px/24px Lato;
-  letter-spacing: 0px;
-  color: #ffffff;
-  opacity: 1;
-  display: flexbox;
-}
-#add-patient-icon {
-  width: 19px;
-  height: 19px;
-  margin: 2px 4px -2px 0;
-}
-.popup-container {
-  left: 500px;
-  top: 50%;
 }

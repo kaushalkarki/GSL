@@ -1,0 +1,89 @@
+
+.sidebar {
+    /* top: 0px;
+    left: 0px; */
+    width: 63px;
+    height: 1080px;
+    background: transparent linear-gradient(360deg, #94007d 0%, #250068 100%) 0%
+      0% no-repeat padding-box;
+    opacity: 1;
+    animation-name: example1;
+    animation-duration: 0.3s;
+    position: relative;
+  }
+  .sidebar-extend {
+    /* top: 0px;
+    left: 0px; */
+    width: 206px;
+    height: 1080px;
+    background: transparent linear-gradient(360deg, #94007d 0%, #250068 100%) 0%
+      0% no-repeat padding-box;
+    opacity: 1;
+    animation-name: example2;
+    animation-duration: 0.3s;
+    position: relative;
+  }
+  @keyframes example1 {
+    0% {
+      width: 206px;
+    }
+    100% {
+      width: 63px;
+    }
+  }
+  @keyframes example2 {
+    0% {
+      width: 63px;
+    }
+    100% {
+      width: 206px;
+    }
+  }
+  .side-div {
+    top: 46px;
+    left: 24px;
+    width: 18px;
+    height: 372px;
+    /* border: 2px solid #ebc3f6; */
+    opacity: 1;
+    position: absolute;
+    /* cursor: pointer; */
+  }
+  #menubtn {
+    width: 24px;
+    height: 24px;
+  }
+  .side-icon {
+    width: 22px;
+    height: 22px;
+    margin-top: 46px;
+    cursor: pointer;
+  }
+  .side-nav {
+    left: 63px;
+    top: 120px;
+    display: grid;
+    position: absolute;
+    animation-name: popup;
+    animation-duration: 1s;
+    /* background-color: #ffffff; */
+  }
+  
+  @keyframes popup {
+    0% {
+      left: 63px;
+      top: -300px;
+    }
+    100% {
+      left: 63px;
+      top: 120px;
+    }
+  }
+  .side-nav-title {
+    margin-bottom: 45px;
+    text-align: left;
+    font: normal normal normal 22px/27px Lato;
+    letter-spacing: 0px;
+    color: #ebc3f6;
+    opacity: 1;
+  }

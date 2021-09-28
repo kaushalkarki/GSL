@@ -1,35 +1,38 @@
 import React, { useState } from "react";
-import logo from "./logo.png";
-import brand from "./brand1.png";
+import logo from "./images/logo.png";
+import brand from "./images/brand1.png";
 import "./Login.css";
 import { NavLink } from "react-router-dom";
 
-
-
-
-
 function Login() {
-  let [user, setName] = useState("");
+  let [email, setEmail] = useState("");
   let [drop, setDrop] = useState("");
   let [password, setPassword] = useState("");
 
+  const LoginTest = async () => {
+    const response = await fetch(
+      "https://gsl-django1.herokuapp.com/users/login/",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email,
+          login_as: drop,
+          password: password,
+        }),
+      }
+    );
+    const data = await response.json();
+    console.log(data);
+  };
   function onSubmit(e) {
-    console.log(user + " " + drop + " " + password);
+    console.log(email + " " + drop + " " + password);
     e.preventDefault();
+    LoginTest();
   }
-  /*let toggle=()=>{
-        var pswrd = document.getElementById('pswrd');
-        var icon = document.querySelector('.fas');
-        if (pswrd.type === "password") {
-            pswrd.type = "text";
-            pswrd.style.marginTop = "20px";
-            icon.style.color = "#7f2092";
-        }
-        else{
-            pswrd.type = "password";
-            icon.style.color = "grey";
-        }
-    }*/
+
   return (
     <div>
       <div className="form-container">
@@ -40,14 +43,14 @@ function Login() {
         <div className=" login-box">
           <form onSubmit={onSubmit}>
             <div>
-              <h1 className="welcome">Welcome</h1>
+              <h1 id="welcome-text">Welcome</h1>
               <img src={brand} className="Logo-Brand" alt="Logo Brand" />
               <input
                 type="text"
                 required
                 placeholder="User Name"
-                value={user}
-                onChange={(e) => setName(e.target.value)}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="input-text"
               />
               <select
@@ -77,12 +80,20 @@ function Login() {
               <small className="small-text">
                 <a href="/forgot">Forgot Password?</a>
               </small>
-              <NavLink to="/Doctor-Dashboard">
 
+              <NavLink
+                  to={
+                    drop === "Doctor"
+                      ? "/Doctor-Dashboard"
+                      : "/Pathology-Dashboard"
+                  }
+                >
               <button type="submit" className="Login-button">
-                LOG IN
+                
+                  LOG IN
               </button>
               </NavLink>
+
             </div>
           </form>
         </div>
@@ -92,7 +103,6 @@ function Login() {
 }
 
 export default Login;
-
 
 // function Login() {
 //   let [user, setName] = useState("");

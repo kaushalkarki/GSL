@@ -5,7 +5,7 @@ const Patients=[
     name:"Salman Khan",
     age:54,
     gender:'M',
-    status: "Admit",
+    status: "Clear",
     date:"07-09-21-14:05"
 },
 {
@@ -21,7 +21,7 @@ const Patients=[
     name:"Aamir khan",
     age:56,
     gender:'M',
-    status: "Discharged",
+    status: "Updated",
     date:"07-09-21-14:05"
 }
 ];

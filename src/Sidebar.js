@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import menu from "./menu.png";
-import back from "./back.svg";
-import forward from "./forward.svg";
-import feedback from "./feedback.svg";
-import help from "./help.svg";
+import menu from "./images/menu.png";
+import back from "./images/back.svg";
+import forward from "./images/forward.svg";
+import feedback from "./images/feedback.svg";
+import help from "./images/help.svg";
+import "./sidebar.css";
 
 const Sidebar = () => {
   const [sidemenu, setSideMenu] = useState(0);

@@ -8,7 +8,7 @@
     left: -28.99951171875px;
     width: 1042px;
     height: 1295px;
-    background: transparent url("logo.png") 0% 0% no-repeat padding-box;
+    background: transparent url("images/logo.png") 0% 0% no-repeat padding-box;
     opacity: 1;
     position: absolute;
   }
@@ -25,7 +25,7 @@
     left: -28.99951171875px;
     width: 1013px;
     height: 1080px;
-    background: transparent url("logo.png") 0% 0% no-repeat padding-box;
+    background: transparent url("images/logo.png") 0% 0% no-repeat padding-box;
     mix-blend-mode: soft-light;
     opacity: 0.52;
   }
@@ -48,7 +48,7 @@
     height: 67px;
     margin-left: 237px;
     margin-top: 0px;
-    background: transparent url("brand1.png") 0% 0% no-repeat padding-box;
+    background: transparent url("images/brand1.png") 0% 0% no-repeat padding-box;
     opacity: 1;
   }
   
@@ -129,7 +129,7 @@
     background-color: transparent;
   }
   
-  .welcome {
+  #welcome-text{
     margin-left: 269px;
     margin-top: 30px;
     margin-bottom: 10px;
@@ -145,16 +145,18 @@
   .Login-button {
     margin-top: 22px;
     margin-left: 142px;
-    width: 384px;
+    width: 362px;
     height: 33px;
     background: #c740a9 0% 0% no-repeat padding-box;
     border-radius: 4px;
     opacity: 1;
+    text-decoration:none;
+    
   }
   
   .Login-button:hover {
-    /* background-color: purple; */
     transition: 0.5s;
+    text-decoration: none;
   }
   
   .input-text {
@@ -225,7 +227,7 @@
   .dropdown {
     margin-top: 29px;
     margin-left: 142px;
-    width: 364px;
+    width: 360px;
     padding-left: 20px;
     height: 40px;
     background: #ffffff 0% 0% no-repeat padding-box;
