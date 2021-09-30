@@ -97,7 +97,7 @@ const ControlledPopup = () => {
                 <div className="details-div">
                   <p> Existing Conditions </p>{" "}
                   <input
-                    type="text"
+                    type="textarea"
                     className="field"
                     id="conditions"
                     placeholder="Type"

@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import schedule from "./images/schedule.png";
 import active from "./images/active.png";
-import closed from "./images/closed.png";
-import inprogress from "./images/in-progress.png";
 import search from "./images/search.png";
 import PatientData from "../PatientData";
 
@@ -36,21 +34,7 @@ const Content = () => {
             <p className="btn-data">05</p>
             <p className="btn-title">Active</p>
           </div>
-        </div>
-        <div className="in-progress">
-          <img src={inprogress} alt="in-progress" className="btn-icons" />
-          <div className="div-btn">
-            <p className="btn-data">05</p>
-            <p className="btn-title">In Progress</p>
-          </div>
-        </div>
-        <div className="closed">
-          <img src={closed} alt="closed" className="btn-icons" />
-          <div className="div-btn">
-            <p className="btn-data">129</p>
 
-            <p className="btn-title">Closed</p>
-          </div>
         </div>
 
         <div className="dashboard">
@@ -78,7 +62,37 @@ const Content = () => {
           <section>
             {display !== 0 ? (
               display === 1 ? (
-                <div>Cases</div>
+                <div>
+                  <table className="table">
+                    <thead>
+                      <tr className="table-head">
+                        <th>ID</th>
+                        <th>Patient ID</th>
+                        <th> Name</th>
+                        <th>Status</th>
+                        <th>Report</th>
+
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {PatientData.map((Element) => {
+                        return (
+                          <tr
+                            key={Element.id}
+                            suppressContentEditableWarning={true}
+                          >
+                            <td>{Element.id}</td>
+                            <td>55325</td>
+                            <td>{Element.name}</td>
+                            <td>{Element.status}</td>
+                            <td>Download</td>
+                            
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
               ) : (
                 <div>Devices</div>
               )

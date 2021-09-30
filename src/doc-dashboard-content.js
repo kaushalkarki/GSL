@@ -4,7 +4,6 @@ import active from "./images/active.png";
 import closed from "./images/closed.png";
 import inprogress from "./images/in-progress.png";
 import search from "./images/search.png";
-import addPatient from "./images/add-patient.png";
 import PatientData from "./PatientData";
 
 import ControlledPopup from "./PopupForm";
@@ -20,7 +19,7 @@ const Content = () => {
   const CasesTab = () => {
     setDisplay(1);
   };
-  const DevicesTab = () => {
+  const ReportTab = () => {
     setDisplay(2);
   };
 
@@ -66,13 +65,7 @@ const Content = () => {
           </div>
         </div>
 
-        <div id="doc-add-patients">
-          <img src={addPatient} alt="add-patients" className="btn-icons" />
-          <div className="div-btn">
-            <p className="btn-data">Add</p>
-            <p className="btn-title">Patients</p>
-          </div>
-        </div>
+       
         <div className="dashboard">
           <nav className="navbar">
             <div className="btn-group">
@@ -82,8 +75,8 @@ const Content = () => {
               <button className="btn" onClick={CasesTab}>
                 Cases
               </button>
-              <button className="btn" onClick={DevicesTab}>
-                Devices
+              <button className="btn" onClick={ReportTab}>
+                Reports
               </button>
             </div>
             <input type="text" id="searchbox" />
@@ -93,11 +86,50 @@ const Content = () => {
           <section>
             {display !== 0 ? (
               display === 1 ? (
-                <div>Cases</div>
+                <div><table className="table">
+                <thead>
+                  <tr className="table-head">
+                    <th>ID</th>
+                    <th>Patient ID</th>
+                    <th> Name</th>
+                    <th>Status</th>
+                    <th>Report</th>
+                    
+                    <th>Edit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {PatientData.map((Element) => {
+                    return (
+                      <tr
+                        key={Element.id}
+                        suppressContentEditableWarning={true}
+                      >
+                        <td>{Element.id}</td>
+                        <td>55325</td>
+                        <td>{Element.name}</td>
+                        <td>{Element.status}</td>
+                        <td>Download</td>
+                        <td width="15%">
+                          <button
+                            className="edit"
+                            onClick={isEditable}
+                            contentEditable="false"
+                            suppressContentEditableWarning={true}
+                          >
+                            Edit
+                          </button>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table></div>
               ) : (
-                <div>Devices</div>
+                <div>Reports will be display here</div>
               )
             ) : (
+              <div>
               <table className="table">
                 <thead>
                   <tr className="table-head">
@@ -138,10 +170,11 @@ const Content = () => {
                   })}
                 </tbody>
               </table>
-           
+              <ControlledPopup/>
+           </div>
            )}
           </section>
-          <ControlledPopup/>
+          
          
 
 

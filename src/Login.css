@@ -100,13 +100,19 @@
     padding: 10px;
   } */
   
-  .forgot {
+  #forgot {
     margin: 10px 0px 0px 200px;
-    font-size: 12px;
     padding: 0px;
-    color: pink;
     text-align: right;
     margin: 0 60px;
+    position: absolute;
+    left:325px;
+    text-align: center;
+    text-decoration: underline;
+    font: normal normal normal 15px/18px Lato;
+    letter-spacing: 0px;
+    color: #444444;
+    opacity: 1;
   }
   
   .forgot:link {
@@ -141,7 +147,7 @@
     color: #444444;
     opacity: 1;
   }
-  
+
   .Login-button {
     margin-top: 22px;
     margin-left: 142px;
@@ -201,14 +207,9 @@
   .small-text {
     /* margin: 20px 150px 0px 5px; */
     font-size: 12px;
-    margin-left: 160px;
-    margin-top: 30px;
-    text-align: center;
-    text-decoration: underline;
-    font: normal normal normal 15px/18px Lato;
-    letter-spacing: 0px;
-    color: #444444;
-    opacity: 1;
+    /* margin-left: 160px;
+    margin-top: 30px; */
+
   }
   
   /* .forgot {

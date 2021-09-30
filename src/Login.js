@@ -74,13 +74,10 @@ function Login() {
                 placeholder="Password"
                 className="input-pas"
               />
-              <small className="small-text">
-                <a href="/newUser">New User?</a>
-              </small>
-              <small className="small-text">
-                <a href="/forgot">Forgot Password?</a>
-              </small>
 
+              <p  id="forgot">
+                <NavLink to={"Forgot-Password"}>Forgot Password?</NavLink>
+                </p>
               <NavLink
                   to={
                     drop === "Doctor"
